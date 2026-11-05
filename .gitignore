@@ -1,0 +1,13 @@
+# Ballerina
+products-api/target/
+products-mcp/target/
+*/Dependencies.toml.bak
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local secrets
+.env

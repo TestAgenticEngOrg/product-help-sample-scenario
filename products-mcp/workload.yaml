@@ -1,0 +1,19 @@
+apiVersion: openchoreo.dev/v1alpha1
+metadata:
+  name: products-mcp
+endpoints:
+  - name: products-mcp
+    visibility:
+      - external
+    port: 9090
+    type: HTTP
+# The Products API's URL and key come from a WSO2 Cloud Resource, so nobody sets them by hand.
+# Register an org Resource named products-catalog-api with the keys PRODUCTS_API_URL (plain) and
+# PRODUCTS_API_KEY (secret), and attach it to the project. The ref is <project>-<resource>: change
+# "default" if the MCP server is in another project.
+dependencies:
+  resources:
+    - ref: default-products-catalog-api
+      envBindings:
+        PRODUCTS_API_URL: PRODUCTS_API_URL
+        PRODUCTS_API_KEY: PRODUCTS_API_KEY

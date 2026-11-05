@@ -1,0 +1,9 @@
+apiVersion: openchoreo.dev/v1alpha1
+metadata:
+  name: products-api
+endpoints:
+  - name: products-api
+    visibility:
+      - external
+    port: 8080
+    type: HTTP
