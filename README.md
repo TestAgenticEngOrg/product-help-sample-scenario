@@ -37,6 +37,19 @@ values for each environment:
 
 Then attach the Resource to the project you deploy the MCP server to.
 
+#### The hosted Products API
+
+To try the sample without hosting the API yourself, use the copy WSO2 runs on the WSO2 Cloud development
+environment:
+
+| Key | Value |
+|---|---|
+| `PRODUCTS_API_URL` | `https://qwt3nn5sk6-gw-p1.gateway.dp.dev.cloud.wso2.com/products-api-api-v1-2c76c944/v1.0` |
+| `PRODUCTS_API_KEY` | Ask the WSO2 Cloud sample team for the key |
+
+The URL works only while that deployment exists, and it may change when the development environment is
+reset. If it stops working, host `products-api/` yourself and use your own URL and key.
+
 ### 2. Deploy the MCP server
 
 In the Integration Platform, create an integration from this repository: type `mcp-server`, path
